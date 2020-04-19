@@ -20,4 +20,5 @@ from artists import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('artists/', views.home_page, name='home'),
+    path('artists/all_artists/', views.all_artists, name='all artists'),
 ]

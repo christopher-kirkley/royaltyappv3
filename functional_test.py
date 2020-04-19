@@ -15,6 +15,17 @@ class BrowserTest(unittest.TestCase):
         title = self.browser.title
         self.assertEqual(title, 'Artists')
 
+    # Looking at page, lists all the current artists in a table
+    def test_artist_table_is_populated(self):
+        rows = self.browser.find_elements_by_id('tr')
+        self.assertNotEqual(len(rows), 0)
+
+    # On the right there is an edit button to change the artist details
+
+    # When clicking the edit button, the fields are fillable
+
+    # Clicking out the table is update with the new artist info
+
 if __name__ == "__main__":
     unittest.main()
 
