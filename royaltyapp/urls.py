@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from artists import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('artists/', views.home_page, name='home'),
 ]

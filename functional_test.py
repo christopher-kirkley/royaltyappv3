@@ -6,7 +6,7 @@ class BrowserTest(unittest.TestCase):
     
     def setUp(self):
         self.browser = webdriver.Firefox(executable_path = '/Users/ck/python/geckodriver/geckodriver')
-        self.browser.get('http://localhost:8000')
+        self.browser.get('http://localhost:8000/artists/')
     
     def tearDown(self):
         self.browser.quit()
