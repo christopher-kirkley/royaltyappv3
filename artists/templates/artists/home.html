@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
 <title>Artists</title>
-<table class="table">
-	<thead>
-	<th>Artist Name</th>
-	<th>First Name</th>
-	<th>Last Name</th>
-	<th>Country</th>
-	<th>Phone</th>
-	</thead>
-	<tbody>
-	</tbody>
-</table>
+<a href="{% url 'add' %}" type="button" id="add-artist">Add Artist</a>
+<ul id='artist-list'>
+	Artist List
+	{% for artist in artists %}
+	<li>
+		<a href="{% url 'edit' artist.id %}" id="artist-link">{{ artist.artist_name }}</a>
+	</li>
+	{% endfor %}
+</ul>
 </html>

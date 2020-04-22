@@ -1,0 +1,9 @@
+<title>Artist</title>
+{{ artist.artist_name }}
+{{ artist.surnom }}
+<h1 id="artist-prenom">{{ artist.prenom }}</h1>
+<form method="post" action="">
+	<input type="text" name="prenom" id="prenom" />
+	<input type="submit" name="artist-update" id="artist-update" />
+	{% csrf_token %}
+</form>
